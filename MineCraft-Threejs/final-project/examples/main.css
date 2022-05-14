@@ -1,0 +1,399 @@
+body {
+	margin: 0;
+	background-color: #000;
+	color: #fff;
+	font-family: Monospace;
+	font-size: 13px;
+	line-height: 24px;
+	overscroll-behavior: none;
+}
+
+a {
+	color: #ff0;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+button {
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+#info {
+	position: absolute;
+	top: 80px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1;
+	/* TODO Solve this in HTML */
+}
+
+.info {
+
+	margin-top: 20px;
+	margin-left: 60px;
+	justify-content: center;
+
+
+	box-sizing: border-box;
+	text-align: center;
+	/* text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1; */
+	/* TODO Solve this in HTML */
+}
+
+.icons {
+
+	padding: 3px;
+	border-radius: 5px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.circle {
+	background-color: rgb(205, 205, 205);
+	padding: 7px;
+	justify-content: center;
+	border-radius: 50%;
+	margin-left: 20px;
+	margin-right: 20px;
+
+
+}
+
+.scale:hover+.w {
+	color: #f00;
+}
+
+.w {
+	text-align: center;
+	display: block;
+}
+
+.circle1 {
+	background-color: rgb(247, 0, 0);
+	width: 25px;
+	height: 25px;
+	justify-content: center;
+	border-radius: 50%;
+	color: #ffffff;
+	justify-content: center;
+	text-align: center;
+
+
+
+
+}
+
+.shopping {
+	color: #ffffff;
+	font-size: 22px;
+}
+
+.basket {
+	margin-right: 50px;
+}
+
+
+.scroll {
+	background-color: rgb(225, 225, 225);
+	;
+	width: 400px;
+	height: 620px;
+	overflow: scroll;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+
+
+	/* display: none; */
+
+
+}
+
+#Drag {
+	position: absolute;
+	z-index: 9;
+}
+
+#show {
+
+	cursor: move;
+	z-index: 10;
+	width: 400px
+}
+
+
+.card {
+	margin-top: 20px;
+	background-color: rgb(225, 225, 225);
+	;
+	width: 300px;
+	text-align: center;
+	justify-content: center;
+	font-size: 12px;
+	align-items: left;
+	margin-left: 40px;
+	border: none !important;
+
+}
+
+.card-img {
+	width: 200px;
+	background-color: #ffffff;
+	text-align: cen;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 5px 10px rgb(187, 187, 187);
+}
+
+.card-body {
+	margin: 0 !important;
+}
+
+.details {
+	font-size: 10px;
+	text-align: left;
+	margin: 0;
+}
+
+.btn {
+	color: #fff;
+	font-size: 12px;
+	background-color: rgb(85, 85, 85);
+
+}
+
+.btn:hover {
+	color: #f00 !important;
+	box-shadow: 5px 5px 8px rgb(187, 187, 187);
+}
+
+.samples {
+	background-color: rgb(85, 85, 85);
+	padding: 8px;
+	color: #fefefe;
+	font-size: 15px;
+
+	/* box-shadow: 5px 5px 10px rgb(145, 145, 145); */
+	text-align: center;
+	border: none !important;
+}
+
+.sampletitle {
+	font-size: 16px;
+	font-weight: 500;
+	margin: 0;
+
+}
+
+.list-model {
+	background-color: white;
+	text-align: center;
+	align-items: center;
+
+}
+
+.list-group {
+	margin-left: 500px;
+}
+
+.list-group-item {
+
+	padding-left: 1.2rem;
+	padding-right: 1.2rem;
+	border: none !important;
+	border-right: 0.5px solid rgb(182, 182, 182) !important;
+	border-radius: 0 !important;
+}
+
+.rounded-pill {
+	background-color: #f00 !important;
+}
+
+.footer {
+	height: 70px;
+	align-items: center;
+
+}
+
+#price {
+	margin-left: 350px;
+}
+
+#ARButton {
+	bottom: 300px !important;
+}
+
+#price {
+	color: #f00;
+
+	justify-content: center;
+
+}
+
+.bt {
+	height: 35px;
+	border-radius: 5px;
+	background-color: #ff0000 !important;
+	border: none !important;
+	color: rgb(255, 255, 255);
+	font-weight: 600;
+}
+
+
+a,
+button,
+input,
+select {
+	pointer-events: auto;
+}
+
+.lil-gui {
+	z-index: 2 !important;
+	/* TODO Solve this in HTML */
+}
+
+.lil-gui.root {
+	top: 150px;
+}
+
+@media all and (max-width: 640px) {
+	.lil-gui.root {
+		right: auto;
+		top: auto;
+		max-height: 50%;
+		max-width: 80%;
+		bottom: 0;
+		left: 0;
+
+	}
+}
+
+#overlay {
+	position: absolute;
+	font-size: 16px;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+#overlay button {
+	background: transparent;
+	border: 0;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 4px;
+	color: #ffffff;
+	padding: 12px 18px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#notSupported {
+	width: 50%;
+	margin: auto;
+	background-color: #f00;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+.left {
+	background-color: #000;
+	color: #ffffff;
+	height: 100vh;
+}
+
+#order:hover {
+	cursor: pointer;
+}
+
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 10;
+	/* Sit on top */
+	padding-top: 100px;
+	/* Location of the box */
+	left: 0px;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+
+	/* background-color: rgba(0,0,0,0.4);  */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+
+	width: 80%;
+	color: Black
+}
+
+#ar-viewer {
+	height: 600px;
+	width: 800px;
+	margin-left: 30px;
+}
+
+.result {
+	color: green;
+	transition: visibility 0s,
+		opacity 1s linear
+}
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+#exit {
+	border: none;
+	background-color: #fefefe;
+	font-size: 30px;
+	text-align: left;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}

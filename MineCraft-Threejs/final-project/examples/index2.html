@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <!-- CSS only -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="main.css">
+  <style>
+    body {
+      background-color: #f0f0f0;
+      color: rgb(99, 97, 97);
+    }
+
+    a {
+      color: #08f;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img class="ms-5" src="./icons/—Pngtree—3d cube_849971.png" height="40px" />
+      <h3 class="navbar-brand">3D Minecraft Studio</h3>
+      <h3 id="price">Price: </h3>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+        </div>
+      </div>
+
+      <button id="download-glb" class="bt me-3">Export Scene AR</button>
+      <!-- <button class="btn-primary bt me-5" >See Order</button> -->
+
+      <a id="link" href=""></a>
+      <div class="d-flex basket">
+        <i id="order" class="bi bi-basket shopping"></i>
+        <div id="amountnr" class="circle1"></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="d-flex">
+
+
+    <!-- Left Side -->
+
+    <div id="Drag" class="left-side">
+      <button id="show" class="samples">Gallery
+      </button>
+      <div id="collapse" class="scroll">
+        <div class="card">
+          <div>
+            <img src="./icons/Menu-Plinth-Tall.jpg" class="card-img-top card-img" alt="...">
+          </div>
+
+          <div class="card-body">
+            <div class="sampletitle">Sample 1</div>
+            <div class="text-left">20×20×20</div>
+            <div class="details">Description: Lorem ipsum dolor sit amet, consectetur adipriceiscing elit, sed do
+              eiusmod
+              tempor
+              incididunt ut labore et dolore magna
+              aliqua.</div>
+
+            <button id="AddSample1" class="btn mt-2"><small>Add to Scene</small></button>
+          </div>
+        </div>
+        <br>
+        <div class="card">
+          <div>
+            <img src="./icons/rough-softwood.jpg" class="card-img-top card-img" alt="...">
+          </div>
+
+          <div class="card-body">
+            <div class="sampletitle">Sample 2</div>
+            <div class="text-left">20×20×20</div>
+            <div class="details">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor
+              incididunt ut labore et dolore magna
+              aliqua.</div>
+
+            <button id="AddSample2" class="btn mt-2"><small>Add to Scene</small></button>
+          </div>
+        </div>
+        <br>
+        <div class="card">
+          <div>
+            <img src="./icons/glass.jpg" class="card-img-top card-img" alt="...">
+          </div>
+
+          <div class="card-body">
+            <div class="sampletitle">Sample 3</div>
+            <div class="text-left">20×200×20</div>
+            <div class="details">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor
+              incididunt ut labore et dolore magna
+              aliqua.</div>
+
+            <button class="btn mt-2"><small>Add to Scene</small></button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- Toggle function in toggle.js....................................................-->
+
+
+    <!-- Right Side...................................................................... -->
+    <div class="right">
+
+      <div class="list-model">
+        <ul class="list-group list-group-horizontal">
+          <li id="All" class="list-group-item d-flex justify-content-between align-items-center"></li>
+          <li id="cubeCount" class="list-group-item d-flex justify-content-between align-items-center"></li>
+          <li id="BeamCount" class="list-group-item d-flex justify-content-between align-items-center"></li>
+
+
+        </ul>
+
+      </div>
+
+
+      <!-- Edit ToolBar -->
+      <div class="d-flex info">
+        <div class="icons d-flex">
+          <div>
+            <div class="circle"><img src="./icons/scale (1).png" height="20px" /></div>
+            <div>"R"</div>
+            <div>Scale</div>
+          </div>
+
+          <div>
+            <div class="circle"><img src="./icons/move.png" height="20px" /></div>
+            <div>"W"</div>
+            <div>Move</div>
+          </div>
+
+          <div>
+            <div class="circle"><img src="./icons/refresh.png" height="20px" /></div>
+            <div>"E"</div>
+            <div>Rotate</div>
+          </div>
+
+          <div>
+            <div class="circle"><img src="./icons/size.png" height="20px" /></div>
+            <div>"+/-"</div>
+            <div>Adjust size</div>
+          </div>
+
+          <div>
+            <div class="circle"><img src="./icons/grid.png" height="20px" /></div>
+            <div>"Shift"</div>
+            <div>snap to grid</div>
+          </div>
+
+          <div>
+            <div class="circle"><img src="./icons/icons8-letter-x-24.png" height="20px" /></div>
+            <div>"X"</div>
+            <div>toggle X</div>
+          </div>
+          <div>
+            <div class="circle"><img src="./icons/icons8-letter-y-24.png" height="20px" /></div>
+            <div>"Y"</div>
+            <div>toggle Y</div>
+          </div>
+          <div>
+            <div class="circle"><img src="./icons/icons8-letter-z-24.png" height="20px" /></div>
+            <div>"Z"</div>
+            <div>toggle Z</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Here is CANVAS -->
+      <div id="canvas"></div>
+
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+
+  <!-- threejs starts here -->
+  <script type="module">
+
+    const url = "https://localhost:7119/api/plinths";
+
+    // import * as THREE from '../build/three.module.js';
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.module.js';
+
+
+    import { GUI } from './jsm/libs/lil-gui.module.min.js';
+
+    import { ARButton } from 'https://unpkg.com/three/examples/jsm/webxr/ARButton.js';
+
+    import {
+      GLTFExporter
+    } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/exporters/GLTFExporter.js';
+
+    import { OrbitControls } from './jsm/controls/OrbitControls.js';
+    import { TransformControls } from './jsm/controls/TransformControls.js';
+    import { DragControls } from './jsm/controls/DragControls.js'
+    let container;
+    let camera, scene, renderer;
+    const HelperObjects = [];
+    let splinePointsLength = 0;
+    const positions = [];
+    const point = new THREE.Vector3();
+    let enableSelection;
+
+    //to all models
+    let object;
+
+    const raycaster = new THREE.Raycaster();
+    const pointer = new THREE.Vector2();
+    const onUpPosition = new THREE.Vector2();
+    const onDownPosition = new THREE.Vector2();
+
+
+    let priceperOne = 0.02;
+    let vol;
+    let price;
+
+    const box = {
+      name: "Cube",
+      width: 20,
+      height: 60,
+      length: 30,
+      id: "",
+
+    }
+
+    const beam = {
+      name: "Beam",
+      width: 20,
+      height: 60,
+      length: 400,
+      id: "",
+    }
+
+    const geometry = new THREE.BoxGeometry(box.width, box.height, box.length);
+    const beamgeometry = new THREE.BoxGeometry(beam.width, beam.height, beam.length);
+
+
+    let transformControl;
+
+    const params = {
+      addCube: addCube,
+      addBeam: addBeam,
+      removeModel: removeModel,
+
+    };
+
+    init();
+
+    function init() {
+      container = document.getElementById('canvas');
+
+
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color(0xf0f0f0);
+
+      // camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
+      // camera.position.set(400, 600, 400);
+      // scene.add(camera);
+
+      camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
+      //camera.position.z = 500;
+      camera.position.set(400, 200, 200);
+
+      //light
+      // Create ambient light and add to scene.
+      // var light = new THREE.AmbientLight(0x404040); // soft white light
+      // scene.add(light);
+
+      // Create directional light and add to scene.
+      var directionalLight = new THREE.DirectionalLight(0xffffff);
+      directionalLight.position.set(1, 1, 1).normalize();
+
+      scene.add(directionalLight);
+
+
+
+
+
+
+      const light = new THREE.SpotLight(0xffffff, 1.5);
+      light.position.set(-600, 1000, -50);
+      light.angle = Math.PI * 0.2;
+      light.castShadow = true;
+      light.shadow.camera.near = 200;
+      light.shadow.camera.far = 2000;
+      light.shadow.bias = - 0.000222;
+      light.shadow.mapSize.width = 1024;
+      light.shadow.mapSize.height = 1024;
+      scene.add(light);
+
+      // var directionalLight = new THREE.DirectionalLight(0xffffff);
+      // directionalLight.position.set(0, 0, -1);
+      // scene.add(directionalLight);
+
+      // const planeGeometry = new THREE.PlaneGeometry(2000, 2000);
+      // planeGeometry.rotateX(- Math.PI / 2);
+      // const planeMaterial = new THREE.ShadowMaterial({ color: 0x000000, opacity: 0.2 });
+
+      // const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+      // plane.position.y = - 200;
+      // plane.receiveShadow = true;
+      // scene.add(plane);
+
+      //grid
+      const helper = new THREE.GridHelper(1000, 100);
+      helper.position.x = - 0;
+      helper.position.y = 0;
+      helper.position.z = 0;
+      helper.material.opacity = 0.25;
+      helper.material.transparent = true;
+      scene.add(helper);
+
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+
+
+      renderer.setPixelRatio(window.devicePixelRatio);
+      //renderer.setSize(window.innerWidth / 1.35, window.innerHeight /1.6);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.shadowMap.enabled = true;
+      //renderer.xr.enabled = true;
+      container.appendChild(renderer.domElement);
+      //document.body.appendChild(renderer.domElement);
+      //document.body.appendChild(ARButton.createButton(renderer));
+
+
+
+      const gui = new GUI();
+      gui.add(params, 'addCube');
+      gui.add(params, 'addBeam');
+      gui.add(params, 'removeModel');
+
+
+
+      gui.open();
+
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.damping = 0.2;
+      controls.addEventListener('change', render);
+
+
+
+
+      transformControl = new TransformControls(camera, renderer.domElement);
+      transformControl.addEventListener('change', render);
+      transformControl.addEventListener('dragging-changed', function (event) {
+
+        controls.enabled = !event.value;
+
+      });
+      scene.add(transformControl);
+
+      document.addEventListener('pointerdown', onPointerDown);
+      document.addEventListener('pointerup', onPointerUp);
+      document.addEventListener('pointermove', onPointerMove);
+      document.addEventListener('click', onClick);
+      window.addEventListener('resize', onWindowResize);
+
+      window.addEventListener('keydown', function (event) {
+
+        switch (event.keyCode) {
+
+          case 16: // Shift
+            transformControl.setTranslationSnap(100);
+            transformControl.setRotationSnap(THREE.MathUtils.degToRad(15));
+            transformControl.setScaleSnap(0.25);
+            break;
+
+          case 87: // W
+
+            transformControl.setMode('translate');
+
+
+
+            break;
+
+          case 69: // E
+            transformControl.setMode('rotate');
+
+            break;
+
+          case 82: // R
+            transformControl.setMode('scale');
+            console.log("fromscale", object.scale);
+
+            break;
+
+          case 65: //A
+            setposition();
+            break;
+
+          case 107: // +, =, num+
+            transformControl.setSize(transformControl.size + 0.1);
+            break;
+
+
+          case 109: // -, _, num-
+            transformControl.setSize(Math.max(transformControl.size - 0.1, 0.1));
+            break;
+
+          case 88: // X
+            transformControl.showX = !transformControl.showX;
+            break;
+
+          case 89: // Y
+            transformControl.showY = !transformControl.showY;
+            break;
+
+          case 90: // Z
+            transformControl.showZ = !transformControl.showZ;
+            break;
+
+
+          case 66: // B
+            break;
+
+        }
+
+      });
+      window.addEventListener('keyup', function (event) {
+
+        switch (event.keyCode) {
+
+          case 16: // Shift
+            transformControl.setTranslationSnap(10);
+            transformControl.setRotationSnap(90);
+            transformControl.setScaleSnap(10);
+            break;
+
+        }
+
+      });
+      render()
+
+    }
+
+    function render() {
+
+      renderer.render(scene, camera);
+
+      // limit move on y axis
+
+      var min = new THREE.Vector3(-10000, 0, -10000);
+      var max = new THREE.Vector3(10000, 50, 10000);
+
+      if (transformControl.object) {
+
+        var movedobject = transformControl.object; // control is an instance of TransformControls
+        console.log("movedobject", movedobject);
+        movedobject.position.clamp(min, max);
+
+
+        // limit scale on one axis
+        //  var min1=  new THREE.Vector3(1, 1, 1);
+        //   var min2 = new THREE.Vector3(1, 2, 1);
+        //    movedobject.scale.clamp(min1,min2);
+
+      }
+
+
+
+
+
+    }
+
+
+
+    function setposition(e) {
+
+      object.position.set(250, 30, 0);
+    }
+
+
+
+
+    document.getElementById('AddSample1').addEventListener('click', addCube);
+
+    function addCube() {
+      splinePointsLength++;
+      const material = new THREE.MeshStandardMaterial({ color: Math.random() * 0xffffff });
+      const object = new THREE.Mesh(geometry, material);
+
+      box.id = object.uuid;
+      object.name = box.name;
+      box.scale = object.scale;
+      // box.width = object.geometry.parameters.width
+
+
+
+      object.position.x = Math.random() * 500;
+      object.position.y = 30;
+      object.position.z = Math.random() * 300;
+
+      object.castShadow = true;
+      object.receiveShadow = true;
+      scene.add(object);
+      HelperObjects.push(object);
+
+
+      // Create - insert new Model- api
+      // Method :   POST 
+
+      console.log("new model is Added");
+
+      let w = box.width * object.scale.x;
+      let l = box.length * object.scale.z;
+      let h = box.height * object.scale.y
+
+      vol = w * l * h;
+      price = vol * priceperOne;
+
+      // call method from Api.js
+      AddModel(box.id, box.width, box.length, box.height, object.scale.x, object.scale.y, object.scale.z, vol, price, box.name);
+
+
+
+      render();
+
+
+
+
+
+
+      // fetch(url, {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({
+
+      //     id: box.id,
+      //     width: box.width,
+      //     length: box.length,
+      //     height: box.height,
+      //     scalex: object.scale.x,
+      //     scaley: object.scale.y,
+      //     scalez: object.scale.z,
+      //     volume: vol, 
+      //     price: price
+      //   })
+
+      // })
+      //   .then(res => res.json())
+      //   .then(data => {
+      //     const dataArr = [];
+      //     dataArr.push(data);
+      //     renderModels(dataArr);
+      //     console.log(dataArr)
+      //   });
+
+
+
+
+    }
+
+
+
+
+
+    document.getElementById('AddSample2').addEventListener('click', addBeam);
+
+    function addBeam() {
+
+      splinePointsLength++;
+      const Bmaterial = new THREE.MeshStandardMaterial({ color: Math.random() * 0xffffff });
+      const Bobject = new THREE.Mesh(beamgeometry, Bmaterial);
+
+      beam.id = Bobject.uuid;
+      Bobject.name = beam.name;
+
+      beam.scale = Bobject.scale;
+      // box.width = object.geometry.parameters.width
+
+
+
+      Bobject.position.x = Math.random() * 300;
+      Bobject.position.y = 30;
+      Bobject.position.z = Math.random() * 300;
+
+      Bobject.castShadow = true;
+      Bobject.receiveShadow = true;
+      scene.add(Bobject);
+      HelperObjects.push(Bobject);
+
+
+      // Create - insert new Model- api
+      // Method :   POST 
+
+      console.log("new model is Added");
+
+      let w = beam.width * Bobject.scale.x;
+      let l = beam.length * Bobject.scale.z;
+      let h = beam.height * Bobject.scale.y
+
+      vol = w * l * h;
+      price = vol * priceperOne;
+
+      // call method from Api.js
+      AddModel(beam.id, beam.width, beam.length, beam.height, Bobject.scale.x, Bobject.scale.y, Bobject.scale.z, vol, price, beam.name);
+
+
+
+      render();
+
+    }
+
+
+
+
+
+    function removeModel() {
+
+      const deletedmodel = HelperObjects.pop();
+      splinePointsLength--;
+
+      positions.pop();
+
+      console.log("deleted model id", deletedmodel.uuid);
+
+      if (transformControl.object === deletedmodel) transformControl.detach();
+      scene.remove(deletedmodel);
+
+
+      //delete box Api
+      // call method from Api.js
+      let id = deletedmodel.uuid
+      if (id) {
+
+
+
+
+        DeleteModel(id);
+
+
+      }
+
+      render();
+
+      // fetch(`${url}/${id}`, {
+      //   method: "Delete",
+
+
+      // })
+      //   .then((response) => {
+      //     if (!response.ok) {
+      //       throw new Error(response.error)
+      //     }
+      //      console.log("response", response);
+
+      //     return response.json();
+
+
+      //   })
+    }
+
+    function onPointerDown(event) {
+
+      onDownPosition.x = event.clientX;
+      onDownPosition.y = event.clientY;
+      console.log("down");
+    }
+
+    function onPointerUp() {
+
+      onUpPosition.x = event.clientX;
+      onUpPosition.y = event.clientY;
+
+      if (onDownPosition.distanceTo(onUpPosition) === 0) transformControl.detach();
+      console.log("up");
+
+      // Update model- api, method : Put
+      if (transformControl.object) {
+
+        console.log(box.id);
+        console.log("object updated upppppppppp", object.geometry.parameters.width, object.scale);
+
+
+        // call method from Api.js
+
+        let width = object.geometry.parameters.width;
+        let height = object.geometry.parameters.height;
+        let length = object.geometry.parameters.depth;
+
+        let w = width * object.scale.x;
+        let l = length * object.scale.z;
+        let h = height * object.scale.y;
+        vol = w * l * h;
+        price = vol * priceperOne;
+
+
+        UpdateModel(object.uuid, width, length, height, object.scale.x, object.scale.y, object.scale.z, vol, price, object.name);
+
+
+        // fetch(`${url}/${box.id}`, {
+        //   method: 'PUT',
+        //   headers:{ 'Content-Type': 'application/json'},
+        //   body: JSON.stringify({
+
+        //     id: box.id,
+        //     width: box.width,
+        //     length: box.length,
+        //     height: box.height,
+        //     scalex: object.scale.x,
+        //     scaley: object.scale.y,
+        //     scalez: object.scale.z,
+        //     volume: vol,
+        //     price: price
+
+        //   })
+        // }).then(res => res.json())
+
+
+
+      }
+
+    }
+
+    function onPointerMove(event) {
+
+      pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
+      pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
+
+      raycaster.setFromCamera(pointer, camera);
+
+      const intersects = raycaster.intersectObjects(HelperObjects, false);
+
+      if (intersects.length > 0) {
+
+        object = intersects[0].object;
+
+        if (object !== transformControl.object) {
+
+          transformControl.attach(object);
+
+
+          // here we attach object
+          console.log("attach", object)
+
+
+
+
+        }
+
+      }
+    }
+    function onWindowResize() {
+
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      render();
+
+    }
+
+    function onKeyDown(event) {
+
+      enableSelection = (event.keyCode === 16) ? true : false;
+
+    }
+
+    function onKeyUp() {
+
+      enableSelection = false;
+
+    }
+
+
+    function onClick(event) {
+
+      event.preventDefault();
+
+      if (enableSelection === true) {
+
+        const draggableObjects = controls.getObjects();
+        draggableObjects.length = 0;
+
+        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+
+        raycaster.setFromCamera(mouse, camera);
+
+        const intersections = raycaster.intersectObjects(objects, true);
+
+        if (intersections.length > 0) {
+
+          const object = intersections[0].object;
+
+          if (group.children.includes(object) === true) {
+
+            object.material.emissive.set(0x000000);
+            scene.attach(object);
+
+
+
+
+          } else {
+
+            object.material.emissive.set(0xaaaaaa);
+            group.attach(object);
+
+          }
+
+          controls.transformGroup = true;
+          draggableObjects.push(group);
+
+
+
+        }
+
+        if (group.children.length === 0) {
+
+          controls.transformGroup = false;
+          draggableObjects.push(...objects);
+
+        }
+
+
+
+
+      }
+
+      console.log("on click")
+
+      render();
+
+    }
+
+
+    //export scene
+
+    const link = document.getElementById('link');
+    const btn = document.getElementById('download-glb')
+    btn.addEventListener('click', AR);
+
+    function AR() {
+
+
+      const exporter = new GLTFExporter();
+      exporter.parse(scene, function (gltf) {
+
+        var Url = saveArrayBuffer(gltf, 'scene.glb');
+        console.log("GLTF: " + gltf);
+
+        console.log("URL: " + Url);
+
+        link.href = Url;
+        console.log("lllllllllllllllllllll", link.href)
+        // links.download = 'scene.glb';
+        // links.click();
+
+
+        let modelViewer = document.getElementById("ar-viewer");
+        modelViewer.setAttribute("src", Url);
+        //   setTimeout(URL.revokeObjectURL(Url), 10000);
+        setTimeout(() => { URL.revokeObjectURL(Url) }, 3000);
+
+
+        //TODo ....Fix it..... Here call QR method from toggle.js
+        // window.addEventListener("load", QR(link.href));
+
+
+
+      }, { binary: true });
+
+      var modal = document.getElementById("myModal");
+      modal.style.display = "block";
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function () {
+        modal.style.display = "none";
+
+      }
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+
+        }
+      }
+
+    }
+
+    function saveArrayBuffer(buffer, filename) {
+      const blob = new Blob([buffer], { type: 'application/octet-stream' }, filename);
+      const url = URL.createObjectURL(blob);
+      return url;
+    }
+
+  </script>
+  <!-- threejs ends here -->
+
+
+
+  <!-- The Modal 1 -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Here You can see your model in AR</p>
+      <div id="qrcode"></div>
+      <a id="a"></a>
+
+
+
+      <model-viewer id="ar-viewer" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        alt="A 3D model of an astronaut">
+        <button slot="ar-button"
+          style="background-color: rgb(243, 243, 243); border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+          👋 Activate AR
+        </button>
+      </model-viewer>
+
+      <script>
+        const li = document.getElementById('a');
+        window.addEventListener("load", () => {
+          var qrc = new QRCode(document.getElementById("qrcode"), {
+            text: link.href,
+            width: 100,
+            height: 100,
+            colorDark: "black",
+            colorLight: "#ffffff",
+            // QRCode.CorrectLevel.L | QRCode.CorrectLevel.M | QRCode.CorrectLevel.H
+            correctLevel: QRCode.CorrectLevel.H
+          });
+        });
+      </script>
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+  <!-- Order Modal -->
+  <div id="orderModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <button id="exit">&times;</button>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">UUID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Volume</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody id="modeltable">
+
+        </tbody>
+      </table>
+      <br>
+      <h4 id="total"></h4>
+
+      <button id="save" class="btn">Save Order</button>
+      <div id="result"></div>
+
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+
+  <!-- JavaScript Bundle with Popper -->
+
+  <script src="Api.js"></script>
+  <script src="./Toggle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> -->
+</body>
+
+</html>
